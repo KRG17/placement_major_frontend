@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.light {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.app {
+  display: flex;
+  padding-top: 50px;
+}
+
+.user-input,
+.input-display {
+  flex: 1;
+  margin: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark .user-input,
+.light .user-input,
+.dark .input-display,
+.light .input-display {
+  color: inherit;
+}
