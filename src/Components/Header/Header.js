@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 import "./Header.css"
 
 const Header = ({ theme, setTheme }) => {
-  // Function to toggle between dark and light themes
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark")
   }
@@ -11,7 +10,6 @@ const Header = ({ theme, setTheme }) => {
   return (
     <nav className={`navbar ${theme}`}>
       <div className="navbar-left">
-        {/* Title as a link to the home page */}
         <Link
           to="/"
           className="title-link"
@@ -20,14 +18,12 @@ const Header = ({ theme, setTheme }) => {
         </Link>
       </div>
       <div className="navbar-right">
-        {/* About link */}
         <Link
           to="/about"
           className="about-class"
         >
           About
         </Link>
-        {/* Theme toggle button */}
         <button
           className="theme-button"
           onClick={toggleTheme}

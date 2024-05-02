@@ -21,35 +21,32 @@ function App() {
           theme={theme}
           setTheme={setTheme}
         />
-        <Switch>
-          <Route
-            exact
-            path="/"
-          >
-            <div className="user-input">
-              <UserInputPage
-                setResponseData={setResponseData}
-                questionType={questionType}
-                setQuestionType={setQuestionType}
-                singleQuestion={singleQuestion}
-                setSingleQuestion={setSingleQuestion}
-                multipleQuestions={multipleQuestions}
-                setMultipleQuestions={setMultipleQuestions}
-              />
-            </div>
-            <div className="input-display">
-              <InputDisplayPage
-                responseData={responseData}
-                questionType={questionType}
-                singleQuestion={singleQuestion}
-                multipleQuestions={multipleQuestions}
-              />
-            </div>
-          </Route>
-          <Route path="/about">
-            <AboutPage />
-          </Route>
-        </Switch>
+        <Route
+          exact
+          path="/"
+        >
+          <div className="user-input">
+            <UserInputPage
+              setResponseData={setResponseData}
+              questionType={questionType}
+              setQuestionType={setQuestionType}
+              singleQuestion={singleQuestion}
+              setSingleQuestion={setSingleQuestion}
+              multipleQuestions={multipleQuestions}
+              setMultipleQuestions={setMultipleQuestions}
+              theme={theme}
+            />
+          </div>
+          <div className="input-display">
+            <InputDisplayPage
+              responseData={responseData}
+              questionType={questionType}
+            />
+          </div>
+        </Route>
+        <Route path="/about">
+          <AboutPage theme={theme} />
+        </Route>
       </div>
     </Router>
   )
